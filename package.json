@@ -1,0 +1,31 @@
+{
+  "name": "azure-storage-manager",
+  "version": "0.1.0",
+  "description": "File management tool for azure blob storage. You can upload or download your local files with CLI commands.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "azsm": "./index.js"
+  },
+  "author": {
+    "name": "hidayet-aydin",
+    "email": "aydin.hid@gmail.com"
+  },
+  "homepage": "https://github.com/hidayet-aydin/azure-storage-manager#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hidayet-aydin/azure-storage-manager.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "azure",
+    "blob storage",
+    "CDN"
+  ],
+  "dependencies": {
+    "@azure/storage-blob": "^12.11.0",
+    "mime-types": "^2.1.35",
+    "yargs": "^17.5.1"
+  }
+}
