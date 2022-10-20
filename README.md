@@ -13,16 +13,18 @@ Install the library with `npm i --save azure-storage-manager`
 | Command  | Description                                               |
 | :------- | :-------------------------------------------------------- |
 | list     | listing                                                   |
-| create   | create a container                                        |
-| remove   | delete a container                                        |
+| create   | Creating a container                                      |
+| remove   | Removing a container                                      |
 | upload   | Uploading from your directory to Blob-Storage container   |
 | download | Downloading from Blob-Storage container to your directory |
 | delete   | Deleting Blob-Storage container content                   |
 
-| Command     | Short Command | Description             |
-| :---------- | :------------ | :---------------------- |
-| --folder    | -f            | source folder path      |
-| --container | -c            | selected container name |
+## 2.2. Parameters
+
+| Parameter   | Short Parameter | Description             |
+| :---------- | :-------------- | :---------------------- |
+| --folder    | -f              | source folder path      |
+| --container | -c              | selected container name |
 
 **Examples**
 
@@ -33,7 +35,7 @@ $ azsm create -c <CONTAINER-NAME>                    # creating a new container
 $ azsm download -c <CONTAINER-NAME> -f <FOLDER-PATH> # downloading container content
 ```
 
-## 2.2. Environment
+## 2.3. Environment
 
 Copy your key from your "azure blob storage" account. This key must be added with an environment named "AzureWebJobsStorage".
 
