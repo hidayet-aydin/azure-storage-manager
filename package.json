@@ -1,6 +1,6 @@
 {
   "name": "azure-storage-manager",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "File management tool for azure blob storage. You can upload or download your local files with CLI commands.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

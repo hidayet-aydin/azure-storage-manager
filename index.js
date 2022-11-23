@@ -76,6 +76,29 @@ const AzureStorageManager = require("./lib/AzureStorageManager");
         type: "string",
       },
     })
+    .command("sas", "Shared Signature Access (SAS) key", {
+      container: {
+        description: "Azure-Blob-Storage Container [Name]",
+        alias: "c",
+        type: "string",
+      },
+      blob: {
+        description: "Blob URL",
+        alias: "b",
+        type: "string",
+      },
+      permission: {
+        description: 'Full permission is "racwd"',
+        alias: "p",
+        type: "string",
+      },
+      expiry: {
+        description:
+          "Expiry (end-time) for integer-hour (default expiry is 12 hour.)",
+        alias: "e",
+        type: "string",
+      },
+    })
     .help()
     .alias("help", "h").argv;
 
@@ -135,6 +158,21 @@ const AzureStorageManager = require("./lib/AzureStorageManager");
         if (argv.container) {
           console.log("The delete time is:", new Date().toLocaleTimeString());
           await azsm.delete();
+        }
+        break;
+
+      case "sas":
+        if (argv.blob && argv.container) {
+          console.log(
+            "The SAS generation time is:",
+            new Date().toLocaleTimeString()
+          );
+          const sas = await azsm.generateBlobSAS(
+            argv.blob,
+            argv.permission,
+            argv.expiry
+          );
+          console.log(sas);
         }
         break;
 
