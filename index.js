@@ -12,6 +12,11 @@ const AzureStorageManager = require("./lib/AzureStorageManager");
         alias: "c",
         type: "string",
       },
+      type: {
+        description: "Blob type select",
+        alias: "t",
+        type: "string",
+      },
     })
     .command("remove", "remove a container", {
       container: {
@@ -95,7 +100,7 @@ const AzureStorageManager = require("./lib/AzureStorageManager");
     switch (argv._[0]) {
       case "create":
         if (argv.container) {
-          await azsm.createContainer();
+          await azsm.createContainer(argv.type);
         }
         break;
 

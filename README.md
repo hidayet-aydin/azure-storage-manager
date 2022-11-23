@@ -1,4 +1,4 @@
-# azure-storage-manager"
+# Azure Storage Manager
 
 File management tool for azure blob storage. You can upload or download your local files with CLI commands.
 
@@ -21,17 +21,18 @@ Install the library with `npm i --save azure-storage-manager`
 
 ## 2.2. Parameters
 
-| Parameter   | Short Parameter | Description             |
-| :---------- | :-------------- | :---------------------- |
-| --folder    | -f              | source folder path      |
-| --container | -c              | selected container name |
+| Parameter   | Short Parameter | Description                                   |
+| :---------- | :-------------- | :-------------------------------------------- |
+| --folder    | -f              | source folder path                            |
+| --container | -c              | selected container name                       |
+| --type      | -t              | container type (used only container creation) |
 
 **Examples**
 
 ```bash
 $ azsm list                                          # listing all container name
 $ azsm list -c <CONTAINER-NAME>                      # listing selected container content
-$ azsm create -c <CONTAINER-NAME>                    # creating a new container
+$ azsm create -c <CONTAINER-NAME> [-t private]       # creating a new container
 $ azsm download -c <CONTAINER-NAME> -f <FOLDER-PATH> # downloading container content
 ```
 
