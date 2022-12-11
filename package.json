@@ -1,6 +1,6 @@
 {
   "name": "azure-storage-manager",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "File management tool for azure blob storage. You can upload or download your local files with CLI commands.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,6 +26,7 @@
   "dependencies": {
     "@azure/storage-blob": "^12.11.0",
     "mime-types": "^2.1.35",
+    "uuid": "^9.0.0",
     "yargs": "^17.5.1"
   }
 }
